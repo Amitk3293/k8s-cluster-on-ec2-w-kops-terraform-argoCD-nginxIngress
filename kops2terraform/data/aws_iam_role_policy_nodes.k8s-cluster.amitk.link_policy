@@ -1,0 +1,48 @@
+{
+  "Statement": [
+    {
+      "Action": [
+        "s3:Get*"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::tf-backend-tikal-task/k8s-cluster.amitk.link/addons/*",
+        "arn:aws:s3:::tf-backend-tikal-task/k8s-cluster.amitk.link/cluster-completed.spec",
+        "arn:aws:s3:::tf-backend-tikal-task/k8s-cluster.amitk.link/igconfig/node/*",
+        "arn:aws:s3:::tf-backend-tikal-task/k8s-cluster.amitk.link/secrets/dockerconfig"
+      ]
+    },
+    {
+      "Action": [
+        "s3:GetBucketLocation",
+        "s3:GetEncryptionConfiguration",
+        "s3:ListBucket",
+        "s3:ListBucketVersions"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::tf-backend-tikal-task"
+      ]
+    },
+    {
+      "Action": [
+        "autoscaling:DescribeAutoScalingInstances",
+        "ec2:DescribeInstanceTypes",
+        "ec2:DescribeInstances",
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:DescribeRepositories",
+        "ecr:GetAuthorizationToken",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetRepositoryPolicy",
+        "ecr:ListImages",
+        "iam:GetServerCertificate",
+        "iam:ListServerCertificates",
+        "kms:GenerateRandom"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ],
+  "Version": "2012-10-17"
+}
