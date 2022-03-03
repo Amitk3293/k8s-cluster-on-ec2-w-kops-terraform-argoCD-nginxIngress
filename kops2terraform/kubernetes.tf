@@ -499,7 +499,7 @@ resource "aws_route_table_association" "eu-central-1a-k8s-cluster-amitk-link" {
   subnet_id      = aws_subnet.eu-central-1a-k8s-cluster-amitk-link.id
 }
 
-resource "aws_s3_object" "cluster-completed-spec" {
+resource "aws_s3_bucket_object" "cluster-completed-spec" {
   bucket   = "tf-backend-tikal-task"
   content  = file("${path.module}/data/aws_s3_bucket_object_cluster-completed.spec_content")
   key      = "k8s-cluster.amitk.link/cluster-completed.spec"
