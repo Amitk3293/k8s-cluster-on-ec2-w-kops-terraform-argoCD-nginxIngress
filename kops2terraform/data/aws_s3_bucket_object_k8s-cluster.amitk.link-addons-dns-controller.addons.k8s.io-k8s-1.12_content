@@ -31,7 +31,7 @@ spec:
         - /dns-controller
         - --watch-ingress=false
         - --dns=aws-route53
-        - --zone=amitk.link
+        - --zone=*/Z06550093MTMFY5W03EHR
         - --zone=*/*
         - -v=2
         env:

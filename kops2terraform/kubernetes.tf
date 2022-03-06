@@ -327,7 +327,7 @@ resource "aws_launch_template" "master-eu-central-1a-masters-k8s-cluster-amitk-l
     name = aws_iam_instance_profile.masters-k8s-cluster-amitk-link.id
   }
   image_id      = "ami-05b308c240ae70bb6"
-  instance_type = "t2.micro"
+  instance_type = "t3.small"
   key_name      = aws_key_pair.kubernetes-k8s-cluster-amitk-link-f08589b16de3769d41fd26fc9b20c778.id
   lifecycle {
     create_before_destroy = true
@@ -412,7 +412,7 @@ resource "aws_launch_template" "nodes-eu-central-1a-k8s-cluster-amitk-link" {
     name = aws_iam_instance_profile.nodes-k8s-cluster-amitk-link.id
   }
   image_id      = "ami-05b308c240ae70bb6"
-  instance_type = "t2.micro"
+  instance_type = "t3.small"
   key_name      = aws_key_pair.kubernetes-k8s-cluster-amitk-link-f08589b16de3769d41fd26fc9b20c778.id
   lifecycle {
     create_before_destroy = true

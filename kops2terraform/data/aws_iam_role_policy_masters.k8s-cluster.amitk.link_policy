@@ -175,6 +175,19 @@
       "Resource": "*"
     },
     {
+          "Effect": "Allow",
+          "Action": "iam:CreateServiceLinkedRole",
+          "Resource": "arn:aws:iam::*:role/aws-service-role/*"
+         },
+         {
+           "Effect": "Allow",
+           "Action": [
+             "ec2:DescribeAccountAttributes",
+             "ec2:DescribeInternetGateways"
+            ],
+           "Resource": "*"
+    },
+    {
       "Action": [
         "autoscaling:SetDesiredCapacity",
         "autoscaling:TerminateInstanceInAutoScalingGroup",
@@ -206,6 +219,7 @@
         "elasticloadbalancing:RegisterTargets",
         "elasticloadbalancing:SetLoadBalancerPoliciesForBackendServer",
         "elasticloadbalancing:SetLoadBalancerPoliciesOfListener"
+        
       ],
       "Condition": {
         "StringEquals": {

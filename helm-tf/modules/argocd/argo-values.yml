@@ -1,0 +1,10 @@
+server:
+  extraArgs:
+    - --insecure
+  ingress:
+    enabled: true
+    hosts:
+      - argo-cd.amitk.link
+    ingressClassName: nginx
+    paths:
+      - /
