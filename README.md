@@ -48,9 +48,12 @@ kops create cluster \
 ```
 
 #### *Edit backend.tf w your remote backend to keep your state file sensitive data being "safe" or delete to use a local backend
+
+
+
 ## ### IMPORTANT ### - 
-### For being able to create ELB for nginx-ingress -  
-### edit kops2terraform/data/aws_iam_role_policy_masters.k8s-cluster.amitk.link_policy and add the following permissions -
+For being able to create ELB for nginx-ingress -  
+edit kops2terraform/data/aws_iam_role_policy_masters.k8s-cluster.amitk.link_policy and add the following permissions -
 ```bash
     {
           "Effect": "Allow",
@@ -81,8 +84,8 @@ To test it,run
 k get nodes
 ```
 ## ### IMPORTANT ### - 
-### deploy the cluster using kops2terraform may take 30 minutes+
-### we have to wait for the k8s DNS controller to update the domain dns records to be able to work on the k8s cluster without any issues.
+deploy the cluster using kops2terraform may take 30 minutes+
+we have to wait for the k8s DNS controller to update the domain dns records to be able to work on the k8s cluster without any issues.
 
 
 ## using Terraform-helm provider
