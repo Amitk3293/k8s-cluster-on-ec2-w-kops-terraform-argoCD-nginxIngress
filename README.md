@@ -52,7 +52,7 @@ kops create cluster \
 
 
 
-## ### IMPORTANT ### - 
+- ## ### IMPORTANT ### - 
 I had some issues with the automatic creation of the ELB resource, to solve it I found this workaround - 
 
 For being able to create ELB for nginx-ingress -  
@@ -81,11 +81,11 @@ terraform init
 terraform plan
 terraform apply
 ```
-## ### IMPORTANT ### - 
+- ## ### IMPORTANT ### - 
 deploy the cluster using kops2terraform may take 30 minutes+
 We have to wait for the k8s DNS controller to update the nodes in the domain dns records to be able to reach the k8s cluster API without any issues.
 
--
+
 When TF process ends your kubeconfig will be edited automatically.
 To test it, valid that the DNS records has been updated and run
 ```bash
