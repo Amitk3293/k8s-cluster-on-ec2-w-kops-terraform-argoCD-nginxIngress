@@ -88,7 +88,7 @@ k get nodes
 ```
 ## ### IMPORTANT ### - 
 deploy the cluster using kops2terraform may take 30 minutes+
-we have to wait for the k8s DNS controller to update the domain dns records to be able to work on the k8s cluster without any issues.
+We have to wait for the k8s DNS controller to update the nodes in the domain dns records to be able to reach the k8s cluster API without any issues.
 
 
 ## using Terraform-helm provider
