@@ -128,6 +128,12 @@ server:
     paths:
       - /
 ```
+ you can switch the parameter
+```bash
+     hosts:
+      - argo-cd.<your-domain>
+ ```
+
 **Edit DNS Cname record with a record name- argo-cd.<your-domain> and a value of the ingress external IP we check before.
 
 
