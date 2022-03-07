@@ -128,7 +128,7 @@ server:
     paths:
       - /
 ```
- you can switch the parameter
+you can switch the parameter
 ```bash
      hosts:
       - argo-cd.<your-domain>
