@@ -53,6 +53,7 @@ kops create cluster \
 
 
 ## ### IMPORTANT ### - 
+I had some issues with the automatic creation of the ELB resource, to solve it I found this workaround - 
 For being able to create ELB for nginx-ingress -  
 edit kops2terraform/data/aws_iam_role_policy_masters.k8s-cluster.amitk.link_policy and add the following permissions -
 ```bash
