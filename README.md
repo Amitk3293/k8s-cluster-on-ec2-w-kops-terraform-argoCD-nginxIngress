@@ -1,5 +1,5 @@
 
-# Create an K8s cluster w Nginx-ingress & Argo-cd using kops and Terraform
+# Create an K8S cluster on EC2 machines w Nginx-ingress & Argo-cd using kops and Terraform
 
 In this repo I created a k8s cluster w 3 nodes using kops and Terraform and used Helm_provider to create nginx-ingress and argo-cd.
 
