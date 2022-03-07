@@ -11,7 +11,7 @@ In this repo I created a simple k8s cluster on ec2 machines using kops and Terra
 ## Prerequisites
 
  - Terraform >= 0.15, < 2.0.0
- - AWS account w the relevant IAM permissions
+ - AWS account 
  - A configured AWS CLI w the relevant IAM permissions ("TF-API-admin" in that case)
  - IAM user w the relevant permissions
  - kubectl
