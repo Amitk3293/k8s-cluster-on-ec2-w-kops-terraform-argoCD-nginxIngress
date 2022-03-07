@@ -50,8 +50,8 @@ kops create cluster \
 
 #### *Edit backend.tf w your remote backend to keep your state file sensitive data being "safe" or delete to use a local backend
 ## ### IMPORTANT ### - 
-### For being able to create ELB for nginx-ingress- edit 
-### k8s-cluster-on-ec2-w-kops-terraform-argoCD-nginxIngress/kops2terraform/data/aws_iam_role_policy_masters.k8s-cluster.amitk.link_policy and add the following permissions -
+### For being able to create ELB for nginx-ingress -  
+### edit k8s-cluster-on-ec2-w-kops-terraform-argoCD-nginxIngress/kops2terraform/data/aws_iam_role_policy_masters.k8s-cluster.amitk.link_policy and add the following permissions -
 ```bash
     {
           "Effect": "Allow",
@@ -145,9 +145,11 @@ X-Frame-Options: sameorigin
 X-Xss-Protection: 1
 ```
 
+
 ### To sync your application w argo-cd run 
 ```bash
-k get deploy -o yaml -n ingress
-k get deploy -o yaml -n argo-cd
+helm get manifest ingress-nginx -n ingress
+helm get manifest argo-cd -n argo-cd
 ```
-and add the deployment.yaml outputs into deployments-yaml folder in the repo, then sync argoCD w the git repo and deployments-yamls path.
+and add the helm manigest output to a file named ingress.yaml or argo-cd.yaml outputs into application-charts/templates/<app-folder>/ folder in the repo. 
+Then logg in to ArgoCD and sync the git repo and application-charts/templates/<app-name> path.
