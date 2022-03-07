@@ -50,7 +50,7 @@ kops create cluster \
 #### *Edit backend.tf w your remote backend to keep your state file sensitive data being "safe" or delete to use a local backend
 ## ### IMPORTANT ### - 
 ### For being able to create ELB for nginx-ingress -  
-### edit k8s-cluster-on-ec2-w-kops-terraform-argoCD-nginxIngress/kops2terraform/data/aws_iam_role_policy_masters.k8s-cluster.amitk.link_policy and add the following permissions -
+### edit kops2terraform/data/aws_iam_role_policy_masters.k8s-cluster.amitk.link_policy and add the following permissions -
 ```bash
     {
           "Effect": "Allow",
