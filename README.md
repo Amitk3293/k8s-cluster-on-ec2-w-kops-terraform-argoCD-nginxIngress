@@ -16,7 +16,6 @@ In this repo I created a simple k8s cluster on ec2 machines using kops and Terra
  - IAM user w the relevant permissions
  - kubectl
  - kops v1.22.4
- - wget (required for the eks module)
  - S3 buckets for kops and as an option for TF state
  - valid registered domain name
  - public and private ssh keys (which will be your access to the ec2 machines)
