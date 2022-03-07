@@ -86,6 +86,8 @@ k get nodes
 
 
 ## using Terraform-helm provider
+
+
 ### For deploy nginx-ingress using Helm_provider go to /helm-tf/modules/nginx-ingress
 
 **Edit backend.tf w your remote backend to keep your state file "safe" or delete to use a local backend
