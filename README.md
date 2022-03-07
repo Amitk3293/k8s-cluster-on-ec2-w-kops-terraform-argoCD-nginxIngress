@@ -18,7 +18,7 @@ In this repo I created a k8s cluster w 3 nodes using kops and Terraform and used
  - kubectl
  - kops v1.22.4
  - S3 buckets for kops and as an option for TF state
- - valid registered domain name
+ - valid registered domain name + DNS own the NS records.
  - public and private ssh keys (which will be your access to the ec2 machines)
 
 
