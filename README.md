@@ -81,16 +81,18 @@ terraform init
 terraform plan
 terraform apply
 ```
-When TF process ends your kubeconfig will be edited automatically.
-To test it,run
-```bash
-k get nodes
-```
 ## ### IMPORTANT ### - 
 deploy the cluster using kops2terraform may take 30 minutes+
 We have to wait for the k8s DNS controller to update the nodes in the domain dns records to be able to reach the k8s cluster API without any issues.
 
+-
+When TF process ends your kubeconfig will be edited automatically.
+To test it, valid that the DNS records has been updated and run
+```bash
+k get nodes
+```
 
+---
 ## using Terraform-helm provider
 
 
